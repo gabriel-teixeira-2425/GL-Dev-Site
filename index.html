@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Gabriel Levi — Criador de vitrines digitais para pequenos negócios em Pacajus e região." />
+  <title>Gabriel Levi — Vitrines Digitais</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- =========================================
+       NAVBAR
+  ========================================= -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#hero" class="nav-logo">Gabriel<span>.</span></a>
+
+      <ul class="nav-links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#precos">Preços</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">🌙</button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#precos">Preços</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contato">Contato</a>
+  </div>
+
+  <!-- =========================================
+       HERO
+  ========================================= -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-circle hero-bg-circle-1"></div>
+    <div class="hero-bg-circle hero-bg-circle-2"></div>
+    <div class="hero-grid"></div>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <span class="dot"></span>
+          Disponível para novos projetos
+        </div>
+
+        <h1 class="hero-title">
+          Vamos fazer juntos<br>
+          o site do seu<br>
+          <span class="gold">negócio.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Crio vitrines digitais para pequenos negócios em Pacajus e região —
+          sem complicação, com resultado.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="https://wa.me/5585992648353?text=Ol%C3%A1%20Gabriel%21%20Vi%20seu%20site%20e%20tenho%20interesse%20em%20criar%20um%20site%20para%20meu%20neg%C3%B3cio.%20Meu%20nome%20%C3%A9%20%5Bseu%20nome%5D%20e%20meu%20neg%C3%B3cio%20%C3%A9%20%5Bseu%20neg%C3%B3cio%5D."
+             target="_blank"
+             rel="noopener noreferrer"
+             class="btn btn-whatsapp">
+            <i class="fa-brands fa-whatsapp"></i> Falar no WhatsApp
+          </a>
+          <a href="#servicos" class="btn btn-outline">
+            <i class="fa-solid fa-arrow-down"></i> Ver serviços
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <span>Role para baixo</span>
+      <div class="arrow"></div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- =========================================
+       SOBRE
+  ========================================= -->
+  <section class="section" id="sobre">
+    <div class="container">
+      <div class="about-grid">
+        <!-- Foto placeholder -->
+        <div class="photo-wrap reveal">
+          <div class="photo-placeholder" id="photoPlaceholder">
+            <i class="fa-solid fa-user"></i>
+            <span>Adicione sua foto em assets/</span>
+            <small style="font-size: 0.7rem; margin-top: 0.5rem;">(coloque foto.jpg e troque no código)</small>
+          </div>
+          <div class="photo-badge">
+            <i class="fa-solid fa-map-pin"></i> Pacajus — CE
+          </div>
+        </div>
+
+        <div class="about-text">
+          <p class="section-label reveal">Quem sou eu</p>
+          <h2 class="section-title reveal">
+            Apaixonado por<br><em>tecnologia</em> desde cedo.
+          </h2>
+          <p class="reveal">
+            Oi, sou o Gabriel! Cresci em Pacajus, no Ceará, e desde pequeno tecnologia sempre foi minha praia.
+            Fiz o ensino médio técnico em Informática — foi ali que percebi que queria transformar essa
+            paixão em profissão.
+          </p>
+          <p class="reveal reveal-delay-1">
+            Hoje estou cursando Análise e Desenvolvimento de Sistemas na UniAri de Sá, e já coloco esse
+            conhecimento em prática criando vitrines digitais para pequenos negócios daqui da região.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-tag"><i class="fa-solid fa-graduation-cap"></i> Técnico em Informática</div>
+            <div class="highlight-tag"><i class="fa-solid fa-laptop-code"></i> ADS — UniAri de Sá</div>
+            <div class="highlight-tag"><i class="fa-solid fa-heart"></i> Pacajus — CE</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- =========================================
+       SERVIÇOS
+  ========================================= -->
+  <section class="section services-bg" id="servicos">
+    <div class="container">
+      <div class="services-header">
+        <p class="section-label reveal">O que eu faço</p>
+        <h2 class="section-title reveal">
+          Sites que <em>funcionam</em><br>para quem compra de você.
+        </h2>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card reveal">
+          <div class="card-icon">📱</div>
+          <h3 class="card-title">Funciona no celular</h3>
+          <p class="card-desc">99% dos clientes acessam pelo celular. Seu site vai parecer profissional em qualquer tela.</p>
+        </div>
+        <div class="card reveal reveal-delay-1">
+          <div class="card-icon">🍔</div>
+          <h3 class="card-title">Cardápio digital</h3>
+          <p class="card-desc">Fotos dos produtos, preços organizados e descrições claras. Sem custo extra por alteração.</p>
+        </div>
+        <div class="card reveal reveal-delay-2">
+          <div class="card-icon">💬</div>
+          <h3 class="card-title">WhatsApp integrado</h3>
+          <p class="card-desc">Botão direto para o seu WhatsApp. O cliente aperta um botão e já cai no seu chat.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- =========================================
+       PÚBLICO-ALVO
+  ========================================= -->
+  <section class="section" id="para-quem">
+    <div class="container">
+      <p class="section-label reveal">Para quem é</p>
+      <h2 class="section-title reveal">
+        Feito para negócios <em>locais</em><br>que querem crescer.
+      </h2>
+
+      <div class="forwhom-grid">
+        <div class="forwhom-card reveal">
+          <div class="forwhom-emoji">💈</div>
+          <div class="forwhom-name">Barbearias</div>
+          <p class="forwhom-desc">Cardápio de cortes, preços e agendamento pelo WhatsApp.</p>
+        </div>
+        <div class="forwhom-card reveal reveal-delay-1">
+          <div class="forwhom-emoji">🥪</div>
+          <div class="forwhom-name">Lanchonetes</div>
+          <p class="forwhom-desc">Cardápio visual com fotos, preços e pedido pelo WhatsApp.</p>
+        </div>
+        <div class="forwhom-card reveal reveal-delay-2">
+          <div class="forwhom-emoji">🏪</div>
+          <div class="forwhom-name">Pequenos comércios</div>
+          <p class="forwhom-desc">Vitrine digital, endereço, horário e contato.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- =========================================
+       PREÇOS
+  ========================================= -->
+  <section class="section pricing-bg" id="precos">
+    <div class="container">
+      <p class="section-label reveal">Preços</p>
+      <h2 class="section-title reveal">
+        Investimento <em>justo</em>,<br>sem surpresas.
+      </h2>
+
+      <div class="pricing-grid">
+        <div class="pricing-card featured reveal">
+          <div class="pricing-label">pagamento único</div>
+          <div class="pricing-name">Setup do Site</div>
+          <div class="pricing-amount">
+            <span class="pricing-from">a partir de</span>
+            <div class="pricing-value"><sup>R$</sup>1.000</div>
+          </div>
+          <ul class="pricing-features">
+            <li><i class="fa-solid fa-check"></i> Design personalizado</li>
+            <li><i class="fa-solid fa-check"></i> Site responsivo (celular)</li>
+            <li><i class="fa-solid fa-check"></i> Cardápio digital</li>
+            <li><i class="fa-solid fa-check"></i> WhatsApp integrado</li>
+          </ul>
+        </div>
+
+        <div class="pricing-card reveal">
+          <div class="pricing-label">por mês</div>
+          <div class="pricing-name">Mensalidade</div>
+          <div class="pricing-amount">
+            <div class="pricing-value"><sup>R$</sup>100</div>
+          </div>
+          <ul class="pricing-features">
+            <li><i class="fa-solid fa-check"></i> Hospedagem incluída</li>
+            <li><i class="fa-solid fa-check"></i> Alterações sob demanda</li>
+            <li><i class="fa-solid fa-check"></i> Suporte via WhatsApp</li>
+            <li><i class="fa-solid fa-check"></i> Sem necessidade de domínio</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pricing-note reveal">
+        <i class="fa-solid fa-circle-info"></i>
+        <div>
+          <strong>Política de cancelamento:</strong> Se quiser cancelar, o site continua no ar por
+          <strong>30 dias de cortesia</strong>. Depois disso, pode ser removido. Sem multa, sem burocracia.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- =========================================
+       FAQ
+  ========================================= -->
+  <section class="section" id="faq">
+    <div class="container">
+      <p class="section-label reveal">FAQ</p>
+      <h2 class="section-title reveal">
+        Perguntas <em>frequentes</em>.
+      </h2>
+
+      <div class="faq-list" id="faqList">
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            Quanto tempo leva para ficar pronto?
+            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+          </button>
+          <div class="faq-answer">
+            O prazo médio é de <strong>5 a 10 dias úteis</strong> após alinharmos fotos, textos e o visual.
+          </div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-1">
+          <button class="faq-question">
+            Preciso entender de tecnologia?
+            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+          </button>
+          <div class="faq-answer">
+            Nenhum! Você me passa as informações e eu faço tudo. Pronto, é só compartilhar o link.
+          </div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-2">
+          <button class="faq-question">
+            O preço do setup pode mudar?
+            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+          </button>
+          <div class="faq-answer">
+            R$1.000 é o ponto de partida. Projetos mais simples ou mais complexos podem ter valores diferentes.
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            E se eu quiser cancelar?
+            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+          </button>
+          <div class="faq-answer">
+            Site continua no ar por <strong>30 dias de cortesia</strong>. Depois pode ser removido. Sem multa.
+          </div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-1">
+          <button class="faq-question">
+            Posso pedir alterações depois?
+            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+          </button>
+          <div class="faq-answer">
+            Sim! Alterações estão inclusas na mensalidade. É só me mandar mensagem no WhatsApp.
+          </div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-2">
+          <button class="faq-question">
+            Preciso ter domínio próprio?
+            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+          </button>
+          <div class="faq-answer">
+            Não é obrigatório. Se quiser um domínio personalizado no futuro, posso ajudar.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- =========================================
+       CONTATO
+  ========================================= -->
+  <section class="section contact-bg" id="contato">
+    <div class="container">
+      <div class="contact-grid">
+        <div>
+          <p class="section-label reveal">Contato</p>
+          <h2 class="contact-headline reveal">
+            Bora colocar seu<br>negócio no <em>mapa</em>?
+          </h2>
+          <p class="contact-para reveal">
+            Sou de Pacajus e atendo toda a região. Manda uma mensagem — sem compromisso.
+          </p>
+
+          <div class="contact-links">
+            <a href="https://wa.me/5585992648353?text=Ol%C3%A1%20Gabriel%21%20Vi%20seu%20site%20e%20tenho%20interesse%20em%20criar%20um%20site%20para%20meu%20neg%C3%B3cio.%20Meu%20nome%20%C3%A9%20%5Bseu%20nome%5D%20e%20meu%20neg%C3%B3cio%20%C3%A9%20%5Bseu%20neg%C3%B3cio%5D."
+               target="_blank"
+               class="contact-link reveal">
+              <div class="contact-link-icon wpp"><i class="fa-brands fa-whatsapp"></i></div>
+              <div class="contact-link-text">
+                <span class="contact-link-label">WhatsApp</span>
+                <span class="contact-link-value">(85) 99264-8353</span>
+              </div>
+            </a>
+
+            <a href="mailto:gabriel.teixeira0417@gmail.com" class="contact-link reveal reveal-delay-1">
+              <div class="contact-link-icon email"><i class="fa-solid fa-envelope"></i></div>
+              <div class="contact-link-text">
+                <span class="contact-link-label">E-mail</span>
+                <span class="contact-link-value">gabriel.teixeira0417@gmail.com</span>
+              </div>
+            </a>
+
+            <a href="https://instagram.com/gabriellevitabr" target="_blank" class="contact-link reveal reveal-delay-2">
+              <div class="contact-link-icon insta"><i class="fa-brands fa-instagram"></i></div>
+              <div class="contact-link-text">
+                <span class="contact-link-label">Instagram</span>
+                <span class="contact-link-value">@gabriellevitabr</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-cta-box reveal">
+          <h3>Me conta sobre o seu negócio 👇</h3>
+          <p>Aperta o botão abaixo, completa seu nome e o nome do seu negócio — simples assim!</p>
+          <div class="contact-whatsapp-msg">
+            "Olá Gabriel! Vi seu site e quero criar um site para meu negócio.
+            Meu nome é <strong>[seu nome]</strong> e meu negócio é <strong>[seu negócio]</strong>."
+          </div>
+          <a href="https://wa.me/5585992648353?text=Ol%C3%A1%20Gabriel%21%20Vi%20seu%20site%20e%20tenho%20interesse%20em%20criar%20um%20site%20para%20meu%20neg%C3%B3cio.%20Meu%20nome%20%C3%A9%20%5Bseu%20nome%5D%20e%20meu%20neg%C3%B3cio%20%C3%A9%20%5Bseu%20neg%C3%B3cio%5D."
+             target="_blank"
+             class="btn btn-whatsapp"
+             style="width:100%; justify-content:center;">
+            <i class="fa-brands fa-whatsapp"></i> Enviar mensagem
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================
+       RODAPÉ
+  ========================================= -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <div class="footer-logo">Gabriel<span> Levi</span></div>
+          <div class="footer-sub">Técnico em Informática · Estudante de ADS · Pacajus — CE</div>
+        </div>
+        <div class="footer-tagline">
+          Feito em <strong>Pacajus</strong> para pequenos negócios.<br>
+          <span style="font-size:0.75rem;">© 2025 Gabriel Levi</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/5585992648353?text=Ol%C3%A1%20Gabriel%21%20Vi%20seu%20site%20e%20tenho%20interesse%20em%20criar%20um%20site%20para%20meu%20neg%C3%B3cio.%20Meu%20nome%20%C3%A9%20%5Bseu%20nome%5D%20e%20meu%20neg%C3%B3cio%20%C3%A9%20%5Bseu%20neg%C3%B3cio%5D."
+     target="_blank"
+     class="wpp-float"
+     aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
