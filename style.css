@@ -432,10 +432,10 @@ body {
    SEÇÃO HERO
    =================================================================== */
 .hero {
-  min-height: 100vh;
+  min-height: calc(100vh - 70px); /* Ajusta considerando a altura do header */
   display: flex;
   align-items: center;
-  padding: 5rem 0 3rem;
+  padding: 1rem 0 2rem; /* Reduzido drasticamente o padding-top */
   position: relative;
   overflow: hidden;
 }
