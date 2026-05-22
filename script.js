@@ -1,64 +1,63 @@
-/* ============================================
-   TEMA CLARO/ESCURO
-   ============================================ */
-const html = document.documentElement;
-const themeBtn = document.getElementById('themeToggle');
+/* ===================================================================
+   MENU MOBILE (estilo Brownie)
+   =================================================================== */
+const header = document.getElementById('main-header');
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
 
-const savedTheme = localStorage.getItem('theme') || 'dark';
-html.setAttribute('data-theme', savedTheme);
-themeBtn.textContent = savedTheme === 'dark' ? '🌙' : '☀️';
+function initHeaderScroll() {
+  if (!header) return;
+  const update = () => header.classList.toggle('scrolled', window.scrollY > 24);
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+}
 
-themeBtn.addEventListener('click', () => {
-  const current = html.getAttribute('data-theme');
-  const next = current === 'dark' ? 'light' : 'dark';
-  html.setAttribute('data-theme', next);
-  themeBtn.textContent = next === 'dark' ? '🌙' : '☀️';
-  localStorage.setItem('theme', next);
-});
+function initMobileMenu() {
+  if (!menuToggle || !mobileMenu) return;
 
-/* ============================================
-   MENU HAMBURGUER
-   ============================================ */
-const hamburger = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobileMenu');
+  function closeMenu() {
+    mobileMenu.classList.remove('open');
+    menuToggle.classList.remove('active');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+    menuToggle.setAttribute('aria-expanded', 'false');
+  }
 
-if (hamburger && mobileMenu) {
-  hamburger.addEventListener('click', () => {
-    const isOpen = mobileMenu.classList.toggle('open');
-    hamburger.classList.toggle('open', isOpen);
-    hamburger.setAttribute('aria-expanded', isOpen);
-    document.body.style.overflow = isOpen ? 'hidden' : '';
+  function openMenu() {
+    mobileMenu.classList.add('open');
+    menuToggle.classList.add('active');
+    mobileMenu.setAttribute('aria-hidden', 'false');
+    menuToggle.setAttribute('aria-expanded', 'true');
+  }
+
+  menuToggle.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.contains('open');
+    if (isOpen) closeMenu();
+    else openMenu();
   });
 
-  document.querySelectorAll('.mobile-link, .mobile-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.remove('open');
-      hamburger.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', false);
-      document.body.style.overflow = '';
-    });
+  mobileMenu.querySelectorAll('.mobile-link').forEach((link) => {
+    link.addEventListener('click', closeMenu);
   });
 }
 
-/* ============================================
+/* ===================================================================
    SCROLL REVEAL
-   ============================================ */
+   =================================================================== */
 const revealElements = document.querySelectorAll('.reveal');
-
-const observer = new IntersectionObserver((entries) => {
+const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
+      revealObserver.unobserve(entry.target);
     }
   });
 }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
-revealElements.forEach(el => observer.observe(el));
+revealElements.forEach(el => revealObserver.observe(el));
 
-/* ============================================
+/* ===================================================================
    FAQ ACCORDION
-   ============================================ */
+   =================================================================== */
 document.querySelectorAll('.faq-question').forEach(btn => {
   btn.addEventListener('click', () => {
     const item = btn.closest('.faq-item');
@@ -68,40 +67,80 @@ document.querySelectorAll('.faq-question').forEach(btn => {
       openItem.classList.remove('open');
     });
 
-    if (!isOpen) {
-      item.classList.add('open');
-    }
+    if (!isOpen) item.classList.add('open');
   });
 });
 
-/* ============================================
-   NAVEGAÇÃO ATIVA POR SCROLL
-   ============================================ */
+/* ===================================================================
+   MENU ATIVO (DESTAQUE)
+   =================================================================== */
 const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-links a');
+const navLinks = document.querySelectorAll('.nav-link');
 
-const navObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      navLinks.forEach(link => {
-        link.style.color = '';
-        if (link.getAttribute('href') === '#' + entry.target.id) {
-          link.style.color = 'var(--gold)';
-        }
-      });
+function updateActiveLink() {
+  let current = '';
+  const scrollPos = window.scrollY + 150;
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+    if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+      current = section.getAttribute('id');
     }
   });
-}, { threshold: 0.4 });
 
-sections.forEach(sec => navObserver.observe(sec));
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    const href = link.getAttribute('href').substring(1);
+    if (href === current) link.classList.add('active');
+  });
+}
 
-/* ============================================
-   FECHAR MOBILE MENU AO REDIMENSIONAR
-   ============================================ */
-window.addEventListener('resize', () => {
-  if (window.innerWidth > 900 && mobileMenu.classList.contains('open')) {
-    mobileMenu.classList.remove('open');
-    hamburger.classList.remove('open');
-    document.body.style.overflow = '';
-  }
+window.addEventListener('scroll', updateActiveLink);
+window.addEventListener('load', updateActiveLink);
+
+/* ===================================================================
+   WHATSAPP - APENAS O BOTÃO "ENVIAR MENSAGEM" USA O TEXTAREA
+   =================================================================== */
+const phoneNumber = '5585992648353';
+const textarea = document.getElementById('customMessage');
+const sendBtn = document.getElementById('sendWhatsappBtn');
+
+const DEFAULT_MESSAGE = 'Olá Gabriel! Vi seu site e quero criar um site para meu negócio. Meu nome é [seu nome] e meu negócio é [seu negócio]. Gostaria de saber mais sobre os valores e prazos.';
+
+if (textarea) {
+  textarea.value = DEFAULT_MESSAGE;
+}
+
+// APENAS este botão usa a mensagem do textarea
+if (sendBtn) {
+  sendBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const message = textarea ? textarea.value : DEFAULT_MESSAGE;
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  });
+}
+
+/* ===================================================================
+   E-MAIL (ABRE GMAIL)
+   =================================================================== */
+const emailLink = document.getElementById('emailLink');
+const emailAddress = 'gabriel.teixeira0417@gmail.com';
+const emailSubject = 'Orçamento para site - GL Dev';
+
+if (emailLink) {
+  emailLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${emailAddress}&su=${encodeURIComponent(emailSubject)}`;
+    window.open(gmailUrl, '_blank');
+  });
+}
+
+/* ===================================================================
+   INICIALIZAÇÃO
+   =================================================================== */
+document.addEventListener('DOMContentLoaded', () => {
+  initHeaderScroll();
+  initMobileMenu();
 });

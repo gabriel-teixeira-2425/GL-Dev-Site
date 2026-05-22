@@ -1,60 +1,90 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme="dark">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Gabriel Levi — Criador de vitrines digitais para pequenos negócios em Pacajus e região." />
-  <title>Gabriel Levi — Vitrines Digitais</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  
+  <!-- SEO -->
+  <meta name="description" content="GL Dev — Vitrines digitais para pequenos negócios em Pacajus e região. Crio sites para barbearias, lanchonetes e pequenos comércios." />
+  <meta name="keywords" content="criação de sites, Pacajus, Ceará, barbearia, lanchonete, site para comercio, vitrine digital, site profissional" />
+  <meta name="author" content="Gabriel Levi - GL Dev" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="GL Dev - Vitrines Digitais em Pacajus" />
+  <meta property="og:description" content="Crio sites para barbearias, lanchonetes e pequenos comércios. Site profissional, cardápio digital e WhatsApp integrado." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://gl-dev.pages.dev" />
+  <meta property="og:image" content="https://gl-dev.pages.dev/assets/preview.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="GL Dev - Vitrines Digitais em Pacajus" />
+  <meta name="twitter:description" content="Crio sites para pequenos negócios em Pacajus e região." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/favicon.png" />
+
+  <title>GL Dev — Vitrines Digitais para Pequenos Negócios</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet" />
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-  <!-- CSS -->
+  <!-- CSS Principal -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- =========================================
-       NAVBAR
-  ========================================= -->
-  <nav class="navbar" id="navbar">
-    <div class="container">
-      <a href="#hero" class="nav-logo">Gabriel<span>.</span></a>
+  <!-- ================================================================
+       CABEÇALHO / NAVBAR (estilo Brownie)
+  ================================================================ -->
+  <header id="main-header" class="main-header">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <div class="logo-mark">
+  <img src="assets/favicon-escuro.png" alt="GL Dev Logo" />
+  <span class="logo-initials">GL</span>
+</div>
+        <span class="logo-wordmark">GL<span>Dev</span></span>
+      </a>
 
       <ul class="nav-links">
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#precos">Preços</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#contato">Contato</a></li>
+        <li><a href="#hero" class="nav-link">Home</a></li>
+        <li><a href="#sobre" class="nav-link">Sobre</a></li>
+        <li><a href="#servicos" class="nav-link">Serviços</a></li>
+        <li><a href="#precos" class="nav-link">Preços</a></li>
+        <li><a href="#faq" class="nav-link">FAQ</a></li>
+        <li><a href="#contato" class="nav-link">Contato</a></li>
       </ul>
 
-      <div class="nav-actions">
-        <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">🌙</button>
-        <button class="hamburger" id="hamburger" aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-inner">
+        <a href="#hero" class="mobile-link">Home</a>
+        <a href="#sobre" class="mobile-link">Sobre</a>
+        <a href="#servicos" class="mobile-link">Serviços</a>
+        <a href="#precos" class="mobile-link">Preços</a>
+        <a href="#faq" class="mobile-link">FAQ</a>
+        <a href="#contato" class="mobile-link">Contato</a>
       </div>
     </div>
-  </nav>
+  </header>
 
-  <!-- Mobile Menu -->
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#sobre">Sobre</a>
-    <a href="#servicos">Serviços</a>
-    <a href="#precos">Preços</a>
-    <a href="#faq">FAQ</a>
-    <a href="#contato">Contato</a>
-  </div>
-
-  <!-- =========================================
-       HERO
-  ========================================= -->
+  <!-- ================================================================
+       SEÇÃO HERO
+  ================================================================ -->
   <section class="hero" id="hero">
     <div class="hero-bg-circle hero-bg-circle-1"></div>
     <div class="hero-bg-circle hero-bg-circle-2"></div>
@@ -79,10 +109,8 @@
         </p>
 
         <div class="hero-buttons">
-          <a href="https://wa.me/5585992648353?text=Ol%C3%A1%20Gabriel%21%20Vi%20seu%20site%20e%20tenho%20interesse%20em%20criar%20um%20site%20para%20meu%20neg%C3%B3cio.%20Meu%20nome%20%C3%A9%20%5Bseu%20nome%5D%20e%20meu%20neg%C3%B3cio%20%C3%A9%20%5Bseu%20neg%C3%B3cio%5D."
-             target="_blank"
-             rel="noopener noreferrer"
-             class="btn btn-whatsapp">
+          <!-- Botão Hero com mensagem genérica -->
+          <a href="https://wa.me/5585992648353?text=Ol%C3%A1%2C%20quero%20fazer%20o%20site%20do%20meu%20neg%C3%B3cio%21" target="_blank" class="btn btn-whatsapp" id="whatsappMainBtn">
             <i class="fa-brands fa-whatsapp"></i> Falar no WhatsApp
           </a>
           <a href="#servicos" class="btn btn-outline">
@@ -91,30 +119,25 @@
         </div>
       </div>
     </div>
-
-    <div class="hero-scroll-hint">
-      <span>Role para baixo</span>
-      <div class="arrow"></div>
-    </div>
   </section>
 
   <div class="section-divider"></div>
 
-  <!-- =========================================
-       SOBRE
-  ========================================= -->
+  <!-- ================================================================
+       SEÇÃO SOBRE
+  ================================================================ -->
   <section class="section" id="sobre">
     <div class="container">
       <div class="about-grid">
-        <!-- Foto placeholder -->
         <div class="photo-wrap reveal">
-          <div class="photo-placeholder" id="photoPlaceholder">
-            <i class="fa-solid fa-user"></i>
-            <span>Adicione sua foto em assets/</span>
-            <small style="font-size: 0.7rem; margin-top: 0.5rem;">(coloque foto.jpg e troque no código)</small>
+          <div class="photo-placeholder">
+            <picture>
+              <source srcset="assets/sua-foto.webp" type="image/webp">
+              <img src="assets/sua-foto.webp" alt="Gabriel Levi - GL Dev" class="profile-photo">
+            </picture>
           </div>
           <div class="photo-badge">
-            <i class="fa-solid fa-map-pin"></i> Pacajus — CE
+            <i class="fa-solid fa-location-dot"></i> Pacajus — CE
           </div>
         </div>
 
@@ -124,18 +147,20 @@
             Apaixonado por<br><em>tecnologia</em> desde cedo.
           </h2>
           <p class="reveal">
-            Oi, sou o Gabriel! Cresci em Pacajus, no Ceará, e desde pequeno tecnologia sempre foi minha praia.
-            Fiz o ensino médio técnico em Informática — foi ali que percebi que queria transformar essa
-            paixão em profissão.
+            Sou Gabriel Levi, fundador da GL Dev. Cresci em Pacajus, no Ceará, e desde pequeno a tecnologia sempre foi minha grande paixão. 
+            Fiz o ensino médio técnico em Informática — foi ali que percebi que queria transformar esse interesse em profissão.
           </p>
           <p class="reveal reveal-delay-1">
-            Hoje estou cursando Análise e Desenvolvimento de Sistemas na UniAri de Sá, e já coloco esse
-            conhecimento em prática criando vitrines digitais para pequenos negócios daqui da região.
+            Hoje curso Análise e Desenvolvimento de Sistemas na UniAri de Sá e utilizo todo esse conhecimento para ajudar pequenos negócios 
+            da nossa região a terem uma presença digital profissional e acessível.
+          </p>
+          <p class="reveal reveal-delay-2">
+            Meu compromisso é entregar sites bonitos, rápidos e que realmente funcionam — sem letras miúdas, sem contratos confusos.
           </p>
           <div class="about-highlights">
-            <div class="highlight-tag"><i class="fa-solid fa-graduation-cap"></i> Técnico em Informática</div>
-            <div class="highlight-tag"><i class="fa-solid fa-laptop-code"></i> ADS — UniAri de Sá</div>
-            <div class="highlight-tag"><i class="fa-solid fa-heart"></i> Pacajus — CE</div>
+            <div class="highlight-tag"><i class="fa-solid fa-microchip"></i> Técnico em Informática</div>
+            <div class="highlight-tag"><i class="fa-solid fa-code"></i> ADS — UniAri de Sá</div>
+            <div class="highlight-tag"><i class="fa-solid fa-location-dot"></i> Pacajus — CE</div>
           </div>
         </div>
       </div>
@@ -144,9 +169,9 @@
 
   <div class="section-divider"></div>
 
-  <!-- =========================================
-       SERVIÇOS
-  ========================================= -->
+  <!-- ================================================================
+       SEÇÃO SERVIÇOS
+  ================================================================ -->
   <section class="section services-bg" id="servicos">
     <div class="container">
       <div class="services-header">
@@ -158,19 +183,19 @@
 
       <div class="cards-grid">
         <div class="card reveal">
-          <div class="card-icon">📱</div>
-          <h3 class="card-title">Funciona no celular</h3>
-          <p class="card-desc">99% dos clientes acessam pelo celular. Seu site vai parecer profissional em qualquer tela.</p>
+          <div class="card-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+          <h3 class="card-title">100% Responsivo</h3>
+          <p class="card-desc">Seu site fica perfeito no celular, tablet ou computador. Seu cliente vê tudo certinho onde estiver.</p>
         </div>
         <div class="card reveal reveal-delay-1">
-          <div class="card-icon">🍔</div>
-          <h3 class="card-title">Cardápio digital</h3>
-          <p class="card-desc">Fotos dos produtos, preços organizados e descrições claras. Sem custo extra por alteração.</p>
+          <div class="card-icon"><i class="fa-solid fa-rectangle-ad"></i></div>
+          <h3 class="card-title">Vitrine Digital</h3>
+          <p class="card-desc">Mostre seus produtos, serviços e preços de forma clara. Uma vitrine 24h aberta para seus clientes.</p>
         </div>
         <div class="card reveal reveal-delay-2">
-          <div class="card-icon">💬</div>
-          <h3 class="card-title">WhatsApp integrado</h3>
-          <p class="card-desc">Botão direto para o seu WhatsApp. O cliente aperta um botão e já cai no seu chat.</p>
+          <div class="card-icon"><i class="fa-brands fa-whatsapp"></i></div>
+          <h3 class="card-title">WhatsApp Integrado</h3>
+          <p class="card-desc">Botão direto para seu WhatsApp. Cliente clica, manda mensagem e já vira um lead.</p>
         </div>
       </div>
     </div>
@@ -178,9 +203,9 @@
 
   <div class="section-divider"></div>
 
-  <!-- =========================================
-       PÚBLICO-ALVO
-  ========================================= -->
+  <!-- ================================================================
+       SEÇÃO PÚBLICO-ALVO
+  ================================================================ -->
   <section class="section" id="para-quem">
     <div class="container">
       <p class="section-label reveal">Para quem é</p>
@@ -190,19 +215,22 @@
 
       <div class="forwhom-grid">
         <div class="forwhom-card reveal">
-          <div class="forwhom-emoji">💈</div>
+          <div class="forwhom-icon"><i class="fa-solid fa-scissors"></i></div>
           <div class="forwhom-name">Barbearias</div>
-          <p class="forwhom-desc">Cardápio de cortes, preços e agendamento pelo WhatsApp.</p>
+          <p class="forwhom-desc">Cardápio de cortes, preços, galeria de fotos e agendamento via WhatsApp.</p>
+          <div class="forwhom-tag"><i class="fa-solid fa-check-circle"></i> Ideal para você</div>
         </div>
         <div class="forwhom-card reveal reveal-delay-1">
-          <div class="forwhom-emoji">🥪</div>
+          <div class="forwhom-icon"><i class="fa-solid fa-utensils"></i></div>
           <div class="forwhom-name">Lanchonetes</div>
-          <p class="forwhom-desc">Cardápio visual com fotos, preços e pedido pelo WhatsApp.</p>
+          <p class="forwhom-desc">Cardápio visual com fotos, preços e pedido direto pelo WhatsApp.</p>
+          <div class="forwhom-tag"><i class="fa-solid fa-check-circle"></i> Ideal para você</div>
         </div>
         <div class="forwhom-card reveal reveal-delay-2">
-          <div class="forwhom-emoji">🏪</div>
-          <div class="forwhom-name">Pequenos comércios</div>
-          <p class="forwhom-desc">Vitrine digital, endereço, horário e contato.</p>
+          <div class="forwhom-icon"><i class="fa-solid fa-store"></i></div>
+          <div class="forwhom-name">Pequenos Comércios</div>
+          <p class="forwhom-desc">Vitrine digital com produtos, endereço, horário e contato direto.</p>
+          <div class="forwhom-tag"><i class="fa-solid fa-check-circle"></i> Ideal para você</div>
         </div>
       </div>
     </div>
@@ -210,9 +238,9 @@
 
   <div class="section-divider"></div>
 
-  <!-- =========================================
-       PREÇOS
-  ========================================= -->
+  <!-- ================================================================
+       SEÇÃO PREÇOS
+  ================================================================ -->
   <section class="section pricing-bg" id="precos">
     <div class="container">
       <p class="section-label reveal">Preços</p>
@@ -220,42 +248,46 @@
         Investimento <em>justo</em>,<br>sem surpresas.
       </h2>
 
-      <div class="pricing-grid">
-        <div class="pricing-card featured reveal">
-          <div class="pricing-label">pagamento único</div>
-          <div class="pricing-name">Setup do Site</div>
-          <div class="pricing-amount">
-            <span class="pricing-from">a partir de</span>
-            <div class="pricing-value"><sup>R$</sup>1.000</div>
+      <div class="pricing-wrapper">
+        <div class="pricing-grid">
+          <div class="pricing-card reveal">
+            <div class="pricing-label">PAGAMENTO ÚNICO</div>
+            <div class="pricing-name">Setup do Site</div>
+            <div class="pricing-amount">
+              <span class="pricing-from">a partir de</span>
+              <div class="pricing-value"><sup>R$</sup>1.000</div>
+            </div>
+            <ul class="pricing-features">
+              <li><i class="fa-solid fa-check"></i> Design personalizado</li>
+              <li><i class="fa-solid fa-check"></i> Site responsivo</li>
+              <li><i class="fa-solid fa-check"></i> Cardápio digital</li>
+              <li><i class="fa-solid fa-check"></i> WhatsApp integrado</li>
+              <li><i class="fa-solid fa-check"></i> Hospedagem configurada</li>
+            </ul>
           </div>
-          <ul class="pricing-features">
-            <li><i class="fa-solid fa-check"></i> Design personalizado</li>
-            <li><i class="fa-solid fa-check"></i> Site responsivo (celular)</li>
-            <li><i class="fa-solid fa-check"></i> Cardápio digital</li>
-            <li><i class="fa-solid fa-check"></i> WhatsApp integrado</li>
-          </ul>
+
+          <div class="pricing-card reveal">
+            <div class="pricing-label">POR MÊS</div>
+            <div class="pricing-name">Mensalidade</div>
+            <div class="pricing-amount">
+              <div class="pricing-value"><sup>R$</sup>100</div>
+            </div>
+            <ul class="pricing-features">
+              <li><i class="fa-solid fa-check"></i> Hospedagem incluída</li>
+              <li><i class="fa-solid fa-check"></i> Alterações sob demanda</li>
+              <li><i class="fa-solid fa-check"></i> Suporte via WhatsApp</li>
+              <li><i class="fa-solid fa-check"></i> Sem necessidade de domínio</li>
+              <li><i class="fa-solid fa-check"></i> Backup e segurança</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="pricing-card reveal">
-          <div class="pricing-label">por mês</div>
-          <div class="pricing-name">Mensalidade</div>
-          <div class="pricing-amount">
-            <div class="pricing-value"><sup>R$</sup>100</div>
+        <div class="pricing-note reveal">
+          <i class="fa-solid fa-circle-info"></i>
+          <div>
+            <strong>Política de cancelamento:</strong> Se você cancelar a mensalidade, seu site continua no ar por <strong>30 dias de cortesia</strong>. 
+            Após esse período, pode ser removido. Sem multas, sem burocracia.
           </div>
-          <ul class="pricing-features">
-            <li><i class="fa-solid fa-check"></i> Hospedagem incluída</li>
-            <li><i class="fa-solid fa-check"></i> Alterações sob demanda</li>
-            <li><i class="fa-solid fa-check"></i> Suporte via WhatsApp</li>
-            <li><i class="fa-solid fa-check"></i> Sem necessidade de domínio</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="pricing-note reveal">
-        <i class="fa-solid fa-circle-info"></i>
-        <div>
-          <strong>Política de cancelamento:</strong> Se quiser cancelar, o site continua no ar por
-          <strong>30 dias de cortesia</strong>. Depois disso, pode ser removido. Sem multa, sem burocracia.
         </div>
       </div>
     </div>
@@ -263,74 +295,76 @@
 
   <div class="section-divider"></div>
 
-  <!-- =========================================
-       FAQ
-  ========================================= -->
+  <!-- ================================================================
+       SEÇÃO FAQ
+  ================================================================ -->
   <section class="section" id="faq">
     <div class="container">
-      <p class="section-label reveal">FAQ</p>
-      <h2 class="section-title reveal">
-        Perguntas <em>frequentes</em>.
-      </h2>
+      <div class="faq-wrapper">
+        <p class="section-label reveal">FAQ</p>
+        <h2 class="section-title reveal">
+          Perguntas <em>frequentes</em>.
+        </h2>
 
-      <div class="faq-list" id="faqList">
-        <div class="faq-item reveal">
-          <button class="faq-question">
-            Quanto tempo leva para ficar pronto?
-            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
-          </button>
-          <div class="faq-answer">
-            O prazo médio é de <strong>5 a 10 dias úteis</strong> após alinharmos fotos, textos e o visual.
+        <div class="faq-list" id="faqList">
+          <div class="faq-item reveal">
+            <button class="faq-question">
+              Quanto tempo leva para ficar pronto?
+              <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+            </button>
+            <div class="faq-answer">
+              O prazo médio é de <strong>5 a 10 dias úteis</strong> após alinharmos fotos, textos e o visual do seu negócio.
+            </div>
           </div>
-        </div>
 
-        <div class="faq-item reveal reveal-delay-1">
-          <button class="faq-question">
-            Preciso entender de tecnologia?
-            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
-          </button>
-          <div class="faq-answer">
-            Nenhum! Você me passa as informações e eu faço tudo. Pronto, é só compartilhar o link.
+          <div class="faq-item reveal reveal-delay-1">
+            <button class="faq-question">
+              Preciso entender de tecnologia?
+              <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+            </button>
+            <div class="faq-answer">
+              Nenhum! Você me passa as informações e eu faço todo o trabalho. Pronto, é só compartilhar o link.
+            </div>
           </div>
-        </div>
 
-        <div class="faq-item reveal reveal-delay-2">
-          <button class="faq-question">
-            O preço do setup pode mudar?
-            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
-          </button>
-          <div class="faq-answer">
-            R$1.000 é o ponto de partida. Projetos mais simples ou mais complexos podem ter valores diferentes.
+          <div class="faq-item reveal reveal-delay-2">
+            <button class="faq-question">
+              O preço do setup pode mudar?
+              <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+            </button>
+            <div class="faq-answer">
+              R$1.000 é o ponto de partida. Projetos mais simples podem custar menos, e projetos mais complexos podem ter um valor ajustado. Conversamos sem compromisso.
+            </div>
           </div>
-        </div>
 
-        <div class="faq-item reveal">
-          <button class="faq-question">
-            E se eu quiser cancelar?
-            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
-          </button>
-          <div class="faq-answer">
-            Site continua no ar por <strong>30 dias de cortesia</strong>. Depois pode ser removido. Sem multa.
+          <div class="faq-item reveal">
+            <button class="faq-question">
+              E se eu quiser cancelar?
+              <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+            </button>
+            <div class="faq-answer">
+              Site continua no ar por <strong>30 dias de cortesia</strong> após o cancelamento. Depois pode ser removido. Sem multa.
+            </div>
           </div>
-        </div>
 
-        <div class="faq-item reveal reveal-delay-1">
-          <button class="faq-question">
-            Posso pedir alterações depois?
-            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
-          </button>
-          <div class="faq-answer">
-            Sim! Alterações estão inclusas na mensalidade. É só me mandar mensagem no WhatsApp.
+          <div class="faq-item reveal reveal-delay-1">
+            <button class="faq-question">
+              Posso pedir alterações depois?
+              <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+            </button>
+            <div class="faq-answer">
+              Sim! Alterações estão inclusas na mensalidade. É só me mandar mensagem no WhatsApp.
+            </div>
           </div>
-        </div>
 
-        <div class="faq-item reveal reveal-delay-2">
-          <button class="faq-question">
-            Preciso ter domínio próprio?
-            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
-          </button>
-          <div class="faq-answer">
-            Não é obrigatório. Se quiser um domínio personalizado no futuro, posso ajudar.
+          <div class="faq-item reveal reveal-delay-2">
+            <button class="faq-question">
+              Preciso ter domínio próprio?
+              <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+            </button>
+            <div class="faq-answer">
+              Não é obrigatório. Se quiser um domínio personalizado no futuro, posso ajudar com isso.
+            </div>
           </div>
         </div>
       </div>
@@ -339,9 +373,9 @@
 
   <div class="section-divider"></div>
 
-  <!-- =========================================
-       CONTATO
-  ========================================= -->
+  <!-- ================================================================
+       SEÇÃO CONTATO
+  ================================================================ -->
   <section class="section contact-bg" id="contato">
     <div class="container">
       <div class="contact-grid">
@@ -355,9 +389,8 @@
           </p>
 
           <div class="contact-links">
-            <a href="https://wa.me/5585992648353?text=Ol%C3%A1%20Gabriel%21%20Vi%20seu%20site%20e%20tenho%20interesse%20em%20criar%20um%20site%20para%20meu%20neg%C3%B3cio.%20Meu%20nome%20%C3%A9%20%5Bseu%20nome%5D%20e%20meu%20neg%C3%B3cio%20%C3%A9%20%5Bseu%20neg%C3%B3cio%5D."
-               target="_blank"
-               class="contact-link reveal">
+            <!-- WhatsApp do card contato - sem mensagem -->
+            <a href="https://wa.me/5585992648353" target="_blank" class="contact-link reveal">
               <div class="contact-link-icon wpp"><i class="fa-brands fa-whatsapp"></i></div>
               <div class="contact-link-text">
                 <span class="contact-link-label">WhatsApp</span>
@@ -365,7 +398,7 @@
               </div>
             </a>
 
-            <a href="mailto:gabriel.teixeira0417@gmail.com" class="contact-link reveal reveal-delay-1">
+            <a href="#" id="emailLink" class="contact-link reveal reveal-delay-1">
               <div class="contact-link-icon email"><i class="fa-solid fa-envelope"></i></div>
               <div class="contact-link-text">
                 <span class="contact-link-label">E-mail</span>
@@ -384,50 +417,64 @@
         </div>
 
         <div class="contact-cta-box reveal">
-          <h3>Me conta sobre o seu negócio 👇</h3>
-          <p>Aperta o botão abaixo, completa seu nome e o nome do seu negócio — simples assim!</p>
-          <div class="contact-whatsapp-msg">
-            "Olá Gabriel! Vi seu site e quero criar um site para meu negócio.
-            Meu nome é <strong>[seu nome]</strong> e meu negócio é <strong>[seu negócio]</strong>."
+          <h3><i class="fa-regular fa-comment-dots"></i> Me conta sobre o seu negócio</h3>
+          
+          <div class="edit-message-area">
+            <label for="customMessage">Digite sua mensagem personalizada:</label>
+            <textarea id="customMessage" rows="5" placeholder="Olá Gabriel! Vi seu site e quero criar um site para meu negócio. Meu nome é [seu nome] e meu negócio é [seu negócio]. Gostaria de saber mais sobre os valores e prazos."></textarea>
           </div>
-          <a href="https://wa.me/5585992648353?text=Ol%C3%A1%20Gabriel%21%20Vi%20seu%20site%20e%20tenho%20interesse%20em%20criar%20um%20site%20para%20meu%20neg%C3%B3cio.%20Meu%20nome%20%C3%A9%20%5Bseu%20nome%5D%20e%20meu%20neg%C3%B3cio%20%C3%A9%20%5Bseu%20neg%C3%B3cio%5D."
-             target="_blank"
-             class="btn btn-whatsapp"
-             style="width:100%; justify-content:center;">
-            <i class="fa-brands fa-whatsapp"></i> Enviar mensagem
-          </a>
+
+          <!-- ÚNICO botão que usa a mensagem do textarea -->
+          <button id="sendWhatsappBtn" class="btn btn-whatsapp">
+            <i class="fa-brands fa-whatsapp"></i> Enviar mensagem no WhatsApp
+          </button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- =========================================
+  <!-- ================================================================
+       SEÇÃO CTA FINAL
+  ================================================================ -->
+  <section class="cta-bg">
+    <div class="container">
+      <div class="cta-box reveal">
+        <h2>Pronto para colocar seu negócio <span class="gold">no mapa</span>?</h2>
+        <p>Fale comigo hoje mesmo e vamos criar sua vitrine digital. Sem compromisso, sem letras miúdas.</p>
+        <!-- CTA sem mensagem -->
+        <a href="https://wa.me/5585992648353" target="_blank" class="btn btn-whatsapp btn-large">
+          <i class="fa-brands fa-whatsapp"></i> Quero começar agora
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
        RODAPÉ
-  ========================================= -->
+  ================================================================ -->
   <footer>
     <div class="container">
       <div class="footer-inner">
         <div class="footer-left">
-          <div class="footer-logo">Gabriel<span> Levi</span></div>
+          <div class="footer-logo">GL<span>Dev</span></div>
           <div class="footer-sub">Técnico em Informática · Estudante de ADS · Pacajus — CE</div>
         </div>
         <div class="footer-tagline">
           Feito em <strong>Pacajus</strong> para pequenos negócios.<br>
-          <span style="font-size:0.75rem;">© 2025 Gabriel Levi</span>
+          <span>© 2025 GL Dev</span>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- WhatsApp Float -->
-  <a href="https://wa.me/5585992648353?text=Ol%C3%A1%20Gabriel%21%20Vi%20seu%20site%20e%20tenho%20interesse%20em%20criar%20um%20site%20para%20meu%20neg%C3%B3cio.%20Meu%20nome%20%C3%A9%20%5Bseu%20nome%5D%20e%20meu%20neg%C3%B3cio%20%C3%A9%20%5Bseu%20neg%C3%B3cio%5D."
-     target="_blank"
-     class="wpp-float"
-     aria-label="WhatsApp">
-    <i class="fa-brands fa-whatsapp"></i>
-  </a>
+  <!-- WhatsApp Float - sem mensagem -->
+  <div class="wpp-float-wrapper">
+    <div class="wpp-tooltip">Dúvidas ou sugestões? Fale comigo</div>
+    <a href="https://wa.me/5585992648353" target="_blank" class="wpp-float" aria-label="WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+  </div>
 
-  <!-- JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
