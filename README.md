@@ -45,7 +45,7 @@ A GL Dev é uma marca pessoal criada para oferecer soluções digitais acessíve
 **CONTATO**
 Gabriel Levi dos Santos Teixeira<br>
 **LinkedIn:** www.linkedin.com/in/gabriel-levi-teixeira<br>
-**GitHub:** https:/github.com/gabriel-teixeira-2425<br>
+**GitHub:** https://github.com/gabriel-teixeira-2425<br>
 **WhatsApp:** https://wa.me/5585992648353<br>
 **Site:** https://gldev.pages.dev<br>
 
